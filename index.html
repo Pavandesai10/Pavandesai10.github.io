@@ -1,37 +1,221 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pavan G Desai | Portfolio</title>
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#f5f7ff;line-height:1.6}a{color:#aeb7ff;text-decoration:none}.wrap{width:min(1050px,92%);margin:auto}nav{position:sticky;top:0;z-index:5;background:#0b1020ee;border-bottom:1px solid #28314d}nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-weight:800}.links{display:flex;gap:20px}.hero{min-height:78vh;display:flex;align-items:center;padding:70px 0}h1{font-size:clamp(3rem,8vw,6rem);line-height:1;margin:15px 0}h2{font-size:2rem}section{padding:70px 0;border-top:1px solid #202842}.tag,.skill{display:inline-block;border:1px solid #354064;border-radius:999px;padding:7px 13px;color:#cfd5ff}.hero p{max-width:700px;color:#c8cede;font-size:1.1rem}.btn{display:inline-block;margin-top:22px;background:#5865f2;color:white;padding:12px 18px;border-radius:10px;font-weight:bold}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:#11182b;border:1px solid #28314d;border-radius:16px;padding:24px}.card p{color:#c8cede}.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{background:#151e35}footer{text-align:center;padding:35px;color:#8f98b2}@media(max-width:700px){.links{gap:10px;font-size:.85rem}.grid{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pavan G Desai | CSE Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a0f1f;
+      color: #f5f7ff;
+      line-height: 1.65;
+    }
+    a { color: #b8c0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1050px, 92%); margin: 0 auto; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10, 15, 31, 0.94);
+      border-bottom: 1px solid #26304b;
+      backdrop-filter: blur(10px);
+    }
+    nav .container {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav-links a { color: #c9d0e8; font-size: 0.95rem; }
+    header { min-height: 82vh; display: flex; align-items: center; }
+    .hero { padding: 80px 0; }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #354064;
+      border-radius: 999px;
+      color: #d1d7ff;
+      font-size: 0.9rem;
+    }
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+    .hero-text {
+      max-width: 740px;
+      color: #c9d0df;
+      font-size: 1.12rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #5865f2;
+      color: #fff;
+      font-weight: 700;
+    }
+    section { padding: 78px 0; border-top: 1px solid #202842; }
+    h2 { margin: 0 0 26px; font-size: 2.1rem; }
+    .lead { color: #c9d0df; max-width: 820px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #11182b;
+      border: 1px solid #293452;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card h3 { margin: 0 0 9px; }
+    .card p { margin: 0; color: #c6cedf; }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 700;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      padding: 9px 14px;
+      border: 1px solid #30405f;
+      border-radius: 999px;
+      background: #151e35;
+      color: #dbe0ff;
+    }
+    footer {
+      padding: 36px 0;
+      text-align: center;
+      color: #8f98b2;
+    }
+    @media (max-width: 700px) {
+      nav .container { padding: 14px 0; align-items: flex-start; }
+      .nav-links { gap: 9px 13px; }
+      .grid { grid-template-columns: 1fr; }
+      header { min-height: 75vh; }
+      .hero { padding: 55px 0; }
+      h1 { font-size: clamp(2.7rem, 14vw, 4.3rem); }
+    }
+  </style>
 </head>
 <body>
-<nav><div class="wrap"><div class="logo">Pavan G Desai</div><div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+  <nav>
+    <div class="container">
+      <div class="brand">Pavan G Desai</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#journey">Learning Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<header class="wrap hero">
-<div>
-<span class="tag">CSE • 3rd Semester</span>
-<h1>Pavan G Desai</h1>
-<p>A Computer Science and Engineering student focused on problem solving, programming practice, practical projects, and learning modern technology.</p>
-<a class="btn" href="#projects">View My Projects</a>
-</div>
-</header>
+  <header>
+    <div class="container hero">
+      <span class="eyebrow">CSE • 3rd Semester</span>
+      <h1>Pavan G Desai</h1>
+      <p class="hero-text">
+        A Computer Science and Engineering student focused on problem solving,
+        programming practice, practical projects, and learning modern technology.
+      </p>
+      <a class="button" href="#projects">View My Projects</a>
+    </div>
+  </header>
 
-<section id="about"><div class="wrap"><h2>About</h2><p>I am a CSE student building my programming and problem-solving skills through coding practice and practical projects. I am interested in growing as a software developer while exploring UI/UX and modern technology.</p></div></section>
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="lead">
+        I am a CSE student building my programming and problem-solving skills
+        through coding practice and practical projects. I am interested in
+        growing as a software developer while exploring UI/UX and modern technology.
+      </p>
+    </div>
+  </section>
 
-<section id="projects"><div class="wrap"><h2>Projects & Learning</h2><div class="grid">
-<div class="card"><h3>Hello World</h3><p>A first programming project created while learning C and GitHub.</p><a href="https://github.com/Pavandesai10/hello-world" target="_blank">View on GitHub →</a></div>
-<div class="card"><h3>LeetCode Solutions</h3><p>A GitHub repository documenting coding and problem-solving practice.</p><a href="https://github.com/Pavandesai10/leetcode-solutions" target="_blank">View on GitHub →</a></div>
-</div></div></section>
+  <section id="journey">
+    <div class="container">
+      <h2>Learning Journey</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Activity 1 — VS Code Setup</h3>
+          <p>Set up Visual Studio Code as a development environment and configured a workspace for programming activities.</p>
+        </article>
+        <article class="card">
+          <h3>Activity 2 — Git &amp; GitHub Setup</h3>
+          <p>Learned the basics of Git and GitHub for version control and managing programming work online.</p>
+        </article>
+        <article class="card">
+          <h3>Activity 3 — GitLens &amp; Live Share</h3>
+          <p>Explored GitLens and Live Share to understand Git-based project tracking and real-time collaboration.</p>
+        </article>
+        <article class="card">
+          <h3>Activity 4 — LeetCode Practice Repository</h3>
+          <p>Worked with a LeetCode solutions repository to organize coding practice and document problem-solving progress.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="skills"><div class="wrap"><h2>Skills</h2><div class="skills">
-<span class="skill">Problem Solving</span><span class="skill">Data Structures</span><span class="skill">Algorithms</span><span class="skill">Coding Practice</span><span class="skill">C Programming</span><span class="skill">Git & GitHub</span><span class="skill">UI/UX Exploration</span>
-</div></div></section>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects &amp; Learning</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Hello World</h3>
+          <p>A first programming project created while learning C and GitHub.</p>
+          <a href="https://github.com/Pavandesai10/hello-world" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>LeetCode Solutions</h3>
+          <p>A GitHub repository documenting coding and problem-solving practice.</p>
+          <a href="https://github.com/Pavandesai10/leetcode-solutions" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="contact"><div class="wrap"><h2>Contact</h2><p>GitHub: <a href="https://github.com/Pavandesai10" target="_blank">github.com/Pavandesai10</a></p></div></section>
-<footer>© 2026 Pavan G Desai</footer>
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Data Structures</span>
+        <span class="skill">Algorithms</span>
+        <span class="skill">Coding Practice</span>
+        <span class="skill">C Programming</span>
+        <span class="skill">Git &amp; GitHub</span>
+        <span class="skill">UI/UX Exploration</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>GitHub:
+        <a href="https://github.com/Pavandesai10" target="_blank" rel="noopener">github.com/Pavandesai10</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>© 2026 Pavan G Desai</footer>
 </body>
 </html>
